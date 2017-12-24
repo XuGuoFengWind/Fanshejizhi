@@ -4,22 +4,22 @@ interface Person{
 class Apple implements Person{
 	@Override
 	public void eat() {
-		System.out.println("³ÔÆ»¹û");
+		System.out.println("åƒè‹¹æœ");
 	}
 }
 class Banana implements Person{
 	@Override
 	public void eat(){
-		System.out.println("³ÔÏã½¶");
+		System.out.println("åƒé¦™è•‰");
 	}
 }
-  //¹¤³§Àà
+  //å·¥å‚ç±»
 class Factory{
 	public static Person getInstance(String className) {
 		switch(className) {
-		case"Æ»¹û":
+		case"è‹¹æœ":
 			return new Apple();
-		case"Ïã½¶":
+		case"è‹¹æœ":
 			return new Banana();
 		default:
 			return null;	
@@ -30,7 +30,7 @@ public class TestFruit {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Person p=Factory.getInstance("Æ»¹û");
+		Person p=Factory.getInstance("è‹¹æœ");
 		p.eat();
 	}
 
